@@ -7,10 +7,10 @@ int main(){
     for(int i = 1; i <= val1; i++){
         for(int j = 1; j <= i; j++){
             if (i == j){
-                printf("(%d * %d) = ", j, val2);
+                printf("(%d * %d) = ", i-j, val2);
             }
             else {
-                printf("(%d * %d) + ", j, val2);
+                printf("(%d * %d) + ", i-j, val2);
             }
         }
         printf("%d\n", (i * (i + 1) /2) * val2);
