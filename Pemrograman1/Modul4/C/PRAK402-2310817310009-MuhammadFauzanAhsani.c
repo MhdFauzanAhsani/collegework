@@ -5,12 +5,16 @@ int main(){
 
     scanf("%d", &val);
 
-    for (int i = 1; i <= val; i = i + 2){
-        printf("%d ", i);
+    for (int i = 1; i <= val; i++){
+        if(i % 2 == 1){
+            printf("%d ", i);
+        }   
     }
     printf("\n");
-    for (int j = val; j >= 1; j = j - 2){
-        printf("%d ", j);
+    for (int j = val; j >= 1; j--){
+        if(j % 2 == 0){
+            printf("%d ", j);
+        }
     }
     return 0;
 }
