@@ -13,7 +13,7 @@ struct queue{
 queue antrian;
 
 bool ISEMPTY(){
-    if (antrian.tail == -1){
+    if (antrian.tail == 0){
         return true;
     }
     else{
@@ -22,7 +22,7 @@ bool ISEMPTY(){
 }
 
 bool ISFULL(){
-    if(antrian.tail == n - 1){
+    if(antrian.tail == n){
         return true;
     }
     else{
@@ -31,23 +31,24 @@ bool ISFULL(){
 }
 
 void INSERT(int data){
-    if(ISEMPTY()){
-        antrian.head = antrian.tail = 0;
-        antrian.data[antrian.tail] = data;
+    if(ISFULL()){
+        cout << "QUEUE IS FULL, CAN'T INSERT" << endl;
     }
     else if (!ISFULL()){
-        antrian.tail++;
         antrian.data[antrian.tail] = data;
+        antrian.tail++;
+        cout << data << " HAS BEEN INSERTED" << endl;
     }
 }
 
 void DELETE(){
     if(ISEMPTY()){
-        cout << "QUEUE IS EMPTY, NOTHING TO DELETE";
+        cout << "QUEUE IS EMPTY, NOTHING TO DELETE" << endl;
     }
-    else if(!ISFULL){
-        cout << antrian.data[antrian.head] << " ";
-        for(int i = antrian.head; i <= antrian.tail - 1 ;i++){
+    else if(!ISEMPTY()){
+        cout << antrian.data[antrian.head] << endl;
+        cout << "FRONT ELEMENT HAS BEEN DELETED" << endl;
+        for(int i = 0; i < antrian.tail; i++){
             antrian.data[i] = antrian.data[i+1];
         }
         antrian.tail--;
@@ -56,24 +57,24 @@ void DELETE(){
 
 void CETAKLAYAR(){
     if(!ISEMPTY()){
-        for(int i = antrian.head; i <= antrian.tail; i++){
+        for(int i = antrian.head; i < antrian.tail; i++){
             cout << "QUEUE AT INDEX " << i << " = " << antrian.data[i] << endl; 
         }
         cout << endl;
     }
     else{
-        cout << "QUEUE IS EMPTY, NOTHING TO PRINT ";
+        cout << "QUEUE IS EMPTY, NOTHING TO PRINT " << endl;
     }
 
 };
 
 void Inisialisasi(){
-    antrian.head = antrian.tail = -1;
+    antrian.head = antrian.tail = 0;
 }
 
 void RESET(){
-    antrian.head = antrian.tail = -1;
-    cout << "QUEUE HAS BEEN CLEARED ";
+    antrian.head = antrian.tail = 0;
+    cout << "QUEUE HAS BEEN CLEARED " << endl;
 }
 
 int PIL;
