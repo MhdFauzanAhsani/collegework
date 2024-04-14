@@ -34,30 +34,26 @@ int penuh(){
     }
 }
 
-void input(int data){
-    if (kosong()==1){
+void input(int val){
+    if(penuh()==0){
         Tumpuk.atas++;
-        Tumpuk.data[Tumpuk.atas] = data;
-        cout << "Data " << Tumpuk.data[Tumpuk.atas] << " Masuk ke Stack. ";
-    }
-    else if(penuh()==0){
-        Tumpuk.atas++;
-        Tumpuk.data[Tumpuk.atas] = data;
-        cout << "Data " << Tumpuk.data[Tumpuk.atas] << " Masuk ke Stack. ";
+        Tumpuk.data[Tumpuk.atas] = val;
+        cout << "Data " << Tumpuk.data[Tumpuk.atas] << " Masuk ke Stack. " << endl;
     }
     else{
-        cout << "Tumpukan Penuh. ";
+        cout << "Tumpukan Penuh. " << endl;
     }
-    
+
 }
 
 void hapus(){
     if(kosong()==0){
-        cout << "Data Teratas Sudah Terambil. ";
+        cout << Tumpuk.data[Tumpuk.atas] << endl;
+        cout << "Data Teratas Sudah Terambil. " << endl;
         Tumpuk.atas--;
     }
     else{
-        cout << "Data Kosong. ";
+        cout << "Data Kosong. " << endl;
     }
 }
 
@@ -69,13 +65,13 @@ void tampil(){
         cout << endl;
     }
     else{
-        cout << "Tumpukan Kosong. ";
+        cout << "Tumpukan Kosong. "<< endl;
     }
 }
 
 void bersih(){
     Tumpuk.atas = -1;
-    cout << "Tumpukan Kosong! ";
+    cout << "Tumpukan Kosong! "<< endl;
 }
 
 char selection[1];
