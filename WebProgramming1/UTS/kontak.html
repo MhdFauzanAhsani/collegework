@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Kontak</title>
+        <script>
+            function klikSubmit() {
+                alert("Data Anda telah tersimpan. Terima kasih atas komentar yang diberikan.");
+            }
+        </script>
+    </head>
+    <body>
+        <table border="1px" width="400">
+            <tr>            
+                <th bgcolor="#8ebc8e" align="center" style="font-family: courier new; font-size: 24 px;"> <h1><b>Hubungi Saya</b></h1></th>
+            </tr>
+            <tr>
+                <td bgcolor="#ffefd5">
+                    <form id="formKontak"> 
+                        <table >
+                            <tr >
+                                <th align=left style="font-family: courier new; font-size: 24px;"><b>Data diri</b></th>
+                            </tr>
+            
+                            <tr>
+                                <td>Nama</td>
+                                <td><input type="text" name="nama"></td>
+                            </tr>
+            
+                            <tr>
+                                <td>Nim</td>
+                                <td><input type="text" name="nim"></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>E-mail</td>
+                                <td><input type="text" name="email"></td>
+                            </tr>
+            
+                            <tr>
+                                <td>Tanggal Lahir</td>
+                                <td><input type="date" ></td>
+                            </tr>
+            
+                            <tr>
+                                <td>Jenis Kelamin</td>
+                                <td><input type="radio" name="gender" value="L"> Laki-laki</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><input type="radio" name="gender" value="P"> Perempuan</td>
+                            </tr>
+            
+                            
+                        </table>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#8ebc8e">
+                    Komentar Anda <br>
+                    <textarea cols="35" rows="5" form="formKontak"></textarea> <br>
+                    <input type="reset" form="formKontak">
+                    <input type="submit" onclick="klikSubmit()">
+                    <a href="beranda.html"><input type="button" value="Cancel" ></a>
+                </td>
+            </tr>
+            
+        </table>
+    </body>
+</html>
