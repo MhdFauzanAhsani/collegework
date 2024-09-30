@@ -20,7 +20,7 @@ public class PRAK104_2310817310009_MuhammadFauzanAhsani {
 				tanganAbu[i].equals("K") && tanganBagas[i].equals("B") || 
 				tanganAbu[i].equals("B") && tanganBagas[i].equals("G")) 
 				pemenang++;
-			else if (tanganAbu[i].equals(tanganBagas[i]));
+			else if (tanganAbu[i].equals(tanganBagas[i])) continue;
 			else pemenang--;
 		}
 		
